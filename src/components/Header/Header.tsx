@@ -1,7 +1,8 @@
+import useTelegram from '../hooks/useTelegram'
 import './Header.css'
 
 const Header = () => {
-    const tg = window.Telegram.WebApp;
+    const {tg} = useTelegram()
     const onClose = () => {
         tg.close()
       }
