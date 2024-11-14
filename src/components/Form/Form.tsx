@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react"
 import useTelegram from "../hooks/useTelegram";
-
+import './Form.css'
 
 const Form = () => {
     const [country, setCountry] = useState('');
@@ -56,7 +56,7 @@ const Form = () => {
             <h3>Write your data</h3>
             <input className="input"
                 type="text"
-                placeholder="`country`"
+                placeholder="country"
                 value={country}
                 onChange={onChangeCountry} />
             <input className="input"
@@ -73,3 +73,5 @@ const Form = () => {
         </div>
     )
 }
+
+export default Form;

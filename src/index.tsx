@@ -9,11 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <BrowserRouter>
-    <Routes>
-      <Route path='/11'>
-        <App />
-      </Route>
-    </Routes>
+    <App />
   </BrowserRouter>
 );
 

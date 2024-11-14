@@ -1,4 +1,4 @@
-
+import './Header.css'
 
 const Header = () => {
     const tg = window.Telegram.WebApp;

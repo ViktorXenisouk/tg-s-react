@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import './App.css';
 import useTelegram from './components/hooks/useTelegram';
 import Header from './components/Header/Header'
-import { Route, Routes, BrowserRouter, Form } from 'react-router-dom'
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import ProductList from './components/ProductList/ProductList';
+import Form from './components/Form/Form'
 
 declare global {
   interface Window {
