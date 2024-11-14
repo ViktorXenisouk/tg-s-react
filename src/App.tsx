@@ -1,28 +1,30 @@
 import React, { useEffect } from 'react';
 import './App.css';
+import useTelegram from './components/hooks/useTelegram';
+import Header from './components/Header/Header'
+import { Route, Routes, BrowserRouter, Form } from 'react-router-dom'
+import ProductList from './components/ProductList/ProductList';
 
 declare global {
   interface Window {
-      Telegram: any;
+    Telegram: any;
   }
 }
 
 function App() {
-  const tg = window.Telegram.WebApp;
+  const telegram = useTelegram();
 
   useEffect(() => {
-    tg.ready();
+    telegram.tg.ready();
   })
 
-  const onClose = () => {
-    tg.close()
-  }
-
   return (
-    <div className="App">
-      work
-      <button onClick={onClose}>close</button>
- 
+    <div className='App'>
+      <Header />
+      <Routes>
+        <Route index element={<ProductList/>}/>
+        <Route path='form' element={<Form/>}/>
+      </Routes>
     </div>
   );
 }
