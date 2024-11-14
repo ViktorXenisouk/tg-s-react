@@ -1,4 +1,4 @@
-const tg:WebApp= window.Telegram;
+const tg:WebApp= window.Telegram.WebApp;
 
 const useTelegram = () => {
 
