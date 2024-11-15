@@ -6,3 +6,4 @@ const MyButton = (props : any) => {
     )
 }
 
+export default MyButton;
