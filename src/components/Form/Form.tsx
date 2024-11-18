@@ -1,6 +1,11 @@
+import useTelegram from '../hooks/useTelegram';
 import './Form.css'
 
 const Form = () => {
+    const {tg,onClose,onToggleButton} = useTelegram();
+
+    console.log(`${tg},${onClose}`)
+
     /*
     const [country, setCountry] = useState('');
     const [city, setCity] = useState('');
