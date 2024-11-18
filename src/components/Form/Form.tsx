@@ -14,28 +14,28 @@ const Form = () => {
             city,
             subject,
         }
-        tg.sendData(JSON.stringify(data))
+        tg?.sendData(JSON.stringify(data))
     },[country,city,subject])
 
     useEffect(() => {
-        tg.onEvent('mainButtonClicked',onSendData)
+        tg?.onEvent('mainButtonClicked',onSendData)
         return () => {
-            tg.offEvent('mainButtonClicked',onSendData)
+            tg?.offEvent('mainButtonClicked',onSendData)
         }
     },[])
 
     useEffect(() => {
-        tg.MainButton.setParams({
+        tg?.MainButton.setParams({
             text: 'Send data'
         })
     }, [])
 
     useEffect(() => {
         if (!country || !city) {
-            tg.MainButton.hide();
+            tg?.MainButton.hide();
         }
         else {
-            tg.MainButton.show();
+            tg?.MainButton.show();
         }
     }, [country, city])
 
