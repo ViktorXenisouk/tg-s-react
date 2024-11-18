@@ -1,4 +1,5 @@
 import './App.css';
+import ProductList from './components/ProductList/ProductList';
 
 declare global {
   interface Window {
@@ -9,6 +10,7 @@ declare global {
 function App() {
   return (
     <div className='App'>
+      <ProductList/>
       libhlbi
     </div>
   );
