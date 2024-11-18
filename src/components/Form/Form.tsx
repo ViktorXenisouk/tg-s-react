@@ -6,7 +6,7 @@ const Form = () => {
     const [country, setCountry] = useState('');
     const [city, setCity] = useState('');
     const [subject, setSubject] = useState('physical');
-    const { tg } = useTelegram();
+   // const { tg } = useTelegram();
 
     const onSendData = useCallback(() => {
         const data = {
@@ -14,29 +14,35 @@ const Form = () => {
             city,
             subject,
         }
-        tg?.sendData(JSON.stringify(data))
+       // tg?.sendData(JSON.stringify(data))
     },[country,city,subject])
 
     useEffect(() => {
+        /*
         tg?.onEvent('mainButtonClicked',onSendData)
         return () => {
             tg?.offEvent('mainButtonClicked',onSendData)
         }
+            */
     },[])
 
     useEffect(() => {
+        /*
         tg?.MainButton.setParams({
             text: 'Send data'
         })
+            */
     }, [])
 
     useEffect(() => {
+        /*
         if (!country || !city) {
             tg?.MainButton.hide();
         }
         else {
             tg?.MainButton.show();
         }
+            */
     }, [country, city])
 
     const onChangeCountry = (e: React.ChangeEvent<HTMLInputElement>) => {
