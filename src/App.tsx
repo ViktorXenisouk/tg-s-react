@@ -12,10 +12,10 @@ declare global {
 
 function App() {
   return (
-    <div className="App">
+    <Routes>
       <Route index element={<ProductList/>}/>
       <Route path="/form" element={<Form/>}/>
-    </div>
+    </Routes>
   );
 }
 
