@@ -10,6 +10,8 @@ const Form = () => {
     const [country, setCountry] = useState('');
     const [city, setCity] = useState('');
     const [subject, setSubject] = useState('physical');
+
+    console.log(`${country},${city},${subject}`)
         /*
 
     const { tg } = useTelegram();
