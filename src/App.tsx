@@ -1,5 +1,4 @@
 import './App.css';
-import Form from './components/Form/Form';
 
 declare global {
   interface Window {
@@ -10,7 +9,6 @@ declare global {
 function App() {
   return (
     <div className='App'>
-      <Form/>
       libhlbi
     </div>
   );
