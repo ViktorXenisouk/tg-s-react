@@ -3,14 +3,14 @@ const tg:WebApp= window.Telegram.WebApp;
 const useTelegram = () => {
 
     const onClose = ()=>{
-        tg.close()
+        tg?.close()
     }
 
     const onToggleButton = ()=>{
-        if(tg.MainButton.isVisible){
-            tg.MainButton.show()
+        if(tg?.MainButton.isVisible){
+            tg?.MainButton.show()
         }else{
-            tg.MainButton.hide()
+            tg?.MainButton.hide()
         }
     }
 
