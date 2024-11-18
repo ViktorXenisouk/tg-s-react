@@ -65,13 +65,15 @@ const Form = () => {
             <input className="input"
                 type="text"
                 placeholder="country"
+                onChange={onChangeCountry}
             />
             <input className="input"
                 type="text"
                 placeholder="city"
+                onChange={onChangeCity}
             />
 
-            <select className="select">
+            <select className="select" onChange={onChangeSubject}>
                 <option value="physical">Phys</option>
                 <option value="legal">Legal</option>
             </select>
