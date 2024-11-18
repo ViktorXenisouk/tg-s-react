@@ -4,7 +4,7 @@ import './Form.css'
 const Form = () => {
     const {tg,onClose,onToggleButton} = useTelegram();
 
-    console.log(`${tg},${onClose}`)
+    console.log(`${tg},${onClose},${onToggleButton}`)
 
     /*
     const [country, setCountry] = useState('');
