@@ -1,5 +1,5 @@
 import useTelegram from '../hooks/useTelegram';
-import { useState } from 'react';
+import { useState,useCallback,useEffect } from 'react';
 import './Form.css'
 
 const Form = () => {
@@ -12,9 +12,6 @@ const Form = () => {
     const [subject, setSubject] = useState('physical');
 
     console.log(`${country},${city},${subject}`)
-        /*
-
-    const { tg } = useTelegram();
 
     const onSendData = useCallback(() => {
         const data = {
@@ -46,7 +43,6 @@ const Form = () => {
             tg?.MainButton.show();
         }
     }, [country, city])
-*/
 
     const onChangeCountry = (e: React.ChangeEvent<HTMLInputElement>) => {
         setCountry(e.target.value);
