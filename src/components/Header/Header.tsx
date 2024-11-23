@@ -4,7 +4,7 @@ import './Header.css'
 const Header = () => {
     const {tg} = useTelegram()
     const onClose = () => {
-        tg.close()
+        tg?.close()
       }
     return (
         <div className={`header`}>
