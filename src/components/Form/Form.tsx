@@ -3,9 +3,7 @@ import { useState,useCallback,useEffect } from 'react';
 import './Form.css'
 
 const Form = () => {
-    const {tg,onClose,onToggleButton} = useTelegram();
-
-    console.log(`${tg},${onClose},${onToggleButton}`)
+    const {tg} = useTelegram();
 
     const [country, setCountry] = useState('');
     const [city, setCity] = useState('');
@@ -27,7 +25,7 @@ const Form = () => {
         return () => {
             tg?.offEvent('mainButtonClicked',onSendData)
         }
-    },[])
+    },[onSendData])
 
     useEffect(() => {
         tg?.MainButton.setParams({
@@ -61,15 +59,17 @@ const Form = () => {
             <input className="input"
                 type="text"
                 placeholder="country"
+                value={country}
                 onChange={onChangeCountry}
             />
             <input className="input"
                 type="text"
                 placeholder="city"
+                value={city}
                 onChange={onChangeCity}
             />
 
-            <select className="select" onChange={onChangeSubject}>
+            <select className="select" value={subject} onChange={onChangeSubject}>
                 <option value="physical">Phys</option>
                 <option value="legal">Legal</option>
             </select>
