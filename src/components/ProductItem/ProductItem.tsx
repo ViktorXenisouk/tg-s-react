@@ -1,21 +1,28 @@
 import './ProductItem.css'
+import MyButton from '../Button/Button';
+import { ProductItemProps } from '../types/types';
 
-type Change = 'btc' | 'not';
-type Price = { value: number, change: Change }
-type ProductItemProps = { name: string, imgUrl: URL | string, price: Price }
-
-const ProductItem = ({ name, imgUrl, price }: ProductItemProps) => {
+const ProductItem = ({ product, onButtonClick }: ProductItemProps) => {
 
     const onClick = () => {
-
+        if (onButtonClick)
+            onButtonClick(product.id)
     }
 
     return (
         <div className='product-item--container'>
-            <div className="product-item--img" style={{backgroundImage:`URL(${imgUrl})`}}></div>
-            <h3 className='product-item--title'>{name}</h3>
-            <h4 className='product-item-price'>price:{price.value} {price.change}</h4>
-            <button className='prduct-item--btn' onClick={onClick}>Buy</button>
+            <div className="product-item--img" style={{ backgroundImage: `URL(${product.imgUrl})` }}></div>
+            <div className='product-item--title'>{product.title}</div>
+            <div className='product-item--discriptoin'> </div>
+            <div className='product-item-price'>
+                <span>price:<b>{product.price.value} {product.price.change}</b></span>
+            </div>
+
+            <MyButton className='product-item--btn' onClick={onClick}>
+                Buy 
+            </MyButton>
         </div>
     )
 }
+
+export { ProductItem };
