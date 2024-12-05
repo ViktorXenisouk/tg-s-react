@@ -25,3 +25,11 @@
 .product-item--add-btn{
     width: 100%;
 }
+
+.selected{
+background-color: white;
+}
+
+.non-selected{
+background-color: green;
+}

@@ -1,6 +1,6 @@
-import useTelegram from '../hooks/useTelegram';
+import useTelegram from '../../hooks/useTelegram';
 import { useState,useCallback,useEffect } from 'react';
-import './Form.css'
+import './FormPage.css'
 
 const Form = () => {
     const {tg} = useTelegram();

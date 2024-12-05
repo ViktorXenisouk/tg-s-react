@@ -1,7 +1,6 @@
 const MyButton = (props : any) => {
     return (
-        <button className={`button ${props.className}`}>
-            {...props}
+        <button {...props} className={`button ${props.className}`}>
         </button>
     )
 }
