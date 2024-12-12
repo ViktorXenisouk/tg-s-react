@@ -9,7 +9,11 @@ const Form = () => {
     const [city, setCity] = useState('');
     const [subject, setSubject] = useState('physical');
 
-    console.log(`${country},${city},${subject}`)
+    useEffect(() => {
+        tg?.MainButton.setParams({
+            text: 'Send data'
+        })
+    })
 
     const onSendData = useCallback(() => {
         const data = {
@@ -26,12 +30,6 @@ const Form = () => {
             tg?.offEvent('mainButtonClicked',onSendData)
         }
     },[onSendData])
-
-    useEffect(() => {
-        tg?.MainButton.setParams({
-            text: 'Send data'
-        })
-    }, [])
 
     useEffect(() => {
         if (!country || !city) {
